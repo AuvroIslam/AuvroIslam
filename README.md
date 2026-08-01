@@ -1,40 +1,53 @@
 <div align="center">
-  <a href="https://github.com/AuvroIslam">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=620&lines=Hi%2C+I'm+Oitijya+Islam+Auvro;CSE+Student+%7C+Builder+%7C+Problem+Solver" alt="Typing introduction" />
-  </a>
+  <h1>Hi there! I'm Oitijya Islam Auvro 👋</h1>
+  <h3>Computer Science & Engineering Student</h3>
 
   <p>
     <a href="https://www.linkedin.com/in/oitijya-islam-auvro-a252a5325/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
     <a href="mailto:oitijya2002@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
     <a href="https://github.com/AuvroIslam"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+    <img src="https://komarev.com/ghpvc/?username=AuvroIslam&style=for-the-badge&color=0e75b6" alt="Profile views" />
   </p>
 </div>
 
 ## About Me
 
 - Fourth-year Computer Science and Engineering student at **Khulna University of Engineering & Technology (KUET)**
-- Current CGPA: **3.63 / 4.00**
 - Interested in web and mobile development, data science, machine learning, and Unity game development
-- Former **React Native Teaching Assistant at Ostad** (role concluded May 2026)
+- I enjoy creating interactive products and using data-driven ideas to solve real-world problems
 - Based in Khulna, Bangladesh
 
-## Highlights
+## Recent Achievements
 
-| Achievement | Details |
-| --- | --- |
-| 🏆 Champion | **Build with Gemma**, Bangladesh Hybrid Hackathon '26 - powered by Gemma and hosted by IEEE Computer Society UIU Student Branch with [Machine Learning Bangladesh](https://www.facebook.com/MLBangladesh0) |
-| 🥈 2nd Runners-Up | **Techathon Nationals - Rover Summit**, with team Logarithm |
-| 🏆 Champion | **KUET FirstByte Datathon 2025** |
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <h2>🏆</h2>
+      <strong>Champion</strong><br />
+      Build with Gemma<br />
+      <sub>Bangladesh Hybrid Hackathon '26</sub>
+    </td>
+    <td align="center" width="25%">
+      <h2>🏆</h2>
+      <strong>2nd Runners-Up</strong><br />
+      BUET CSE Fest 2026<br />
+      <sub>Hackathon</sub>
+    </td>
+    <td align="center" width="25%">
+      <h2>🏆</h2>
+      <strong>2nd Runners-Up</strong><br />
+      Techathon Nationals - Rover Summit<br />
+      <sub>Team Logarithm</sub>
+    </td>
+    <td align="center" width="25%">
+      <h2>🏆</h2>
+      <strong>Champion</strong><br />
+      KUET FirstByte Datathon 2025
+    </td>
+  </tr>
+</table>
 
-## Featured Projects
-
-| Project | What I built | Stack |
-| --- | --- | --- |
-| [Mio](https://github.com/AuvroIslam/Mio-typeScript-) | A React Native app that connects people through their favorite TV shows and movies. | React Native, Expo, TypeScript |
-| [Waste Recognizer](https://github.com/AuvroIslam/wasteRecognizer) | An image-classification model for recognizing waste types. | Python, Fast.ai, Hugging Face |
-| [Olympic vs GDP](https://github.com/AuvroIslam/Olympic_vs_Gdp) | A data exploration of the correlation between GDP and Olympic performance. | Tableau, React, Data Visualization |
-| [BloodShot](https://github.com/AuvroIslam/BloodShot) | A fast-paced Unity action game where every bullet costs health. | Unity, C# |
-| [Studio71](https://github.com/Learnathon-By-Geeky-Solutions/studio71) | A team game-development project from the Geeky Solutions Learnathon. | Unity, C# |
+<p align="center"><sub>Build with Gemma was powered by Gemma and hosted by IEEE Computer Society UIU Student Branch with <a href="https://www.facebook.com/MLBangladesh0">Machine Learning Bangladesh</a>.</sub></p>
 
 ## Tech Stack
 
@@ -73,13 +86,3 @@
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=AuvroIslam&theme=github-compact&hide_border=true" alt="Auvro Islam's contribution graph" />
 </div>
-
-## Connect
-
-I am always interested in building useful products, collaborating on data-driven ideas, and learning from good engineering conversations.
-
-<p>
-  <a href="mailto:oitijya2002@gmail.com">oitijya2002@gmail.com</a> ·
-  <a href="https://www.linkedin.com/in/oitijya-islam-auvro-a252a5325/">LinkedIn</a> ·
-  <a href="https://porfolio-website-alpha-six.vercel.app/">Portfolio</a>
-</p>
