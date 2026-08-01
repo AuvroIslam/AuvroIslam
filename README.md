@@ -6,16 +6,18 @@
     <a href="https://www.linkedin.com/in/oitijya-islam-auvro-a252a5325/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
     <a href="mailto:oitijya2002@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
     <a href="https://github.com/AuvroIslam"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+    <a href="https://porfolio-website-alpha-six.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+    <a href="https://www.logarithmstudio.com/"><img src="https://img.shields.io/badge/Logarithm_Studio-0F172A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Logarithm Studio" /></a>
     <img src="https://komarev.com/ghpvc/?username=AuvroIslam&style=for-the-badge&color=0e75b6" alt="Profile views" />
   </p>
 </div>
 
 ## About Me
 
+- Founder, [Logarithm Studio](https://www.logarithmstudio.com/)
 - Fourth-year Computer Science and Engineering student at **Khulna University of Engineering & Technology (KUET)**
 - Interested in web and mobile development, data science, machine learning, and Unity game development
 - I enjoy creating interactive products and using data-driven ideas to solve real-world problems
-- Based in Khulna, Bangladesh
 
 ## Recent Achievements
 
@@ -25,29 +27,32 @@
       <h2>🏆</h2>
       <strong>Champion</strong><br />
       Build with Gemma<br />
-      <sub>Bangladesh Hybrid Hackathon '26</sub>
+      Bangladesh Hybrid Hackathon '26<br />
+      <sub>Powered by Gemma</sub>
     </td>
     <td align="center" width="25%">
       <h2>🏆</h2>
       <strong>2nd Runners-Up</strong><br />
       BUET CSE Fest 2026<br />
-      <sub>Hackathon</sub>
+      Hackathon<br />
+      <sub>Microservices &amp; DevOps</sub>
     </td>
     <td align="center" width="25%">
       <h2>🏆</h2>
       <strong>2nd Runners-Up</strong><br />
-      Techathon Nationals - Rover Summit<br />
-      <sub>Team Logarithm</sub>
+      Techathon Nationals<br />
+      Rover Summit<br />
+      <sub>IUT Robotics Society</sub>
     </td>
     <td align="center" width="25%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
-      KUET FirstByte Datathon 2025
+      KUET FirstByte<br />
+      Datathon 2025<br />
+      <sub>Data Science Competition</sub>
     </td>
   </tr>
 </table>
-
-<p align="center"><sub>Build with Gemma was powered by Gemma and hosted by IEEE Computer Society UIU Student Branch with <a href="https://www.facebook.com/MLBangladesh0">Machine Learning Bangladesh</a>.</sub></p>
 
 ## Tech Stack
 
@@ -79,7 +84,7 @@
 ## GitHub Stats
 
 <div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=AuvroIslam&show_icons=true&theme=transparent&hide_border=true&rank_icon=github" alt="Auvro Islam's GitHub statistics" />
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AuvroIslam&theme=github_dark" alt="Auvro Islam's GitHub statistics" />
   <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=AuvroIslam&theme=transparent&hide_border=true" alt="Auvro Islam's contribution streak" />
 </div>
 
