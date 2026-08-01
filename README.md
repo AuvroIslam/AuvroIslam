@@ -32,20 +32,20 @@
     <td align="center" valign="top" width="25%">
       <h2>🏆</h2>
       <strong>2nd Runners-Up</strong><br />
-      Microservices &amp; DevOps<br />
+      Microservices &amp; DevOps Hackathon<br />
       <sub>BUET CSE Fest 2026</sub>
     </td>
     <td align="center" valign="top" width="25%">
       <h2>🏆</h2>
       <strong>2nd Runners-Up</strong><br />
-      Programming Hero National Hackathon<br />
+      Techathon Nationals &amp; Rover Summit Hackathon<br />
       <sub>IUT Robotics Society</sub>
     </td>
     <td align="center" valign="top" width="25%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
-      Data Hackathon<br />
-      <sub>KUET FirstByte Datathon 2025</sub>
+      KUET FirstByte Datathon 2025<br />
+      <sub>K-MiNDs (KUET-Machine Intelligence and Data Science)</sub>
     </td>
   </tr>
 </table>
