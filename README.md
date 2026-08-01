@@ -1,6 +1,8 @@
 <div align="center">
   <h1>Hi there! I'm Oitijya Islam Auvro 👋</h1>
-  <h3>Computer Science & Engineering Student</h3>
+  <a href="https://github.com/AuvroIslam">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=24&amp;duration=2500&amp;pause=1000&amp;color=36BCF7&amp;center=true&amp;vCenter=true&amp;width=520&amp;lines=Software+Engineer;DevOps+Engineer;Product+Engineer" alt="Software Engineer, DevOps Engineer, Product Engineer" />
+  </a>
 
   <p>
     <a href="https://www.linkedin.com/in/oitijya-islam-auvro-a252a5325/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
