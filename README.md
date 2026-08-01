@@ -5,9 +5,7 @@
   <p>
     <a href="https://www.linkedin.com/in/oitijya-islam-auvro-a252a5325/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
     <a href="mailto:oitijya2002@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-    <a href="https://github.com/AuvroIslam"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
     <a href="https://porfolio-website-alpha-six.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
-    <a href="https://www.logarithmstudio.com/"><img src="https://img.shields.io/badge/Logarithm_Studio-0F172A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Logarithm Studio" /></a>
     <img src="https://komarev.com/ghpvc/?username=AuvroIslam&style=for-the-badge&color=0e75b6" alt="Profile views" />
   </p>
 </div>
@@ -23,33 +21,29 @@
 
 <table>
   <tr>
-    <td align="center" width="25%">
+    <td align="center" valign="top" width="25%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
-      Build with Gemma<br />
-      Bangladesh Hybrid Hackathon '26<br />
-      <sub>Powered by Gemma</sub>
+      Build with Gemma Hybrid Hackathon<br />
+      <sub>Gemma &amp; Bangladesh Machine Learning Society</sub>
     </td>
-    <td align="center" width="25%">
+    <td align="center" valign="top" width="25%">
       <h2>🏆</h2>
       <strong>2nd Runners-Up</strong><br />
-      BUET CSE Fest 2026<br />
-      Hackathon<br />
-      <sub>Microservices &amp; DevOps</sub>
+      Microservices &amp; DevOps<br />
+      <sub>BUET CSE Fest 2026</sub>
     </td>
-    <td align="center" width="25%">
+    <td align="center" valign="top" width="25%">
       <h2>🏆</h2>
       <strong>2nd Runners-Up</strong><br />
-      Techathon Nationals<br />
-      Rover Summit<br />
+      Programming Hero National Hackathon<br />
       <sub>IUT Robotics Society</sub>
     </td>
-    <td align="center" width="25%">
+    <td align="center" valign="top" width="25%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
-      KUET FirstByte<br />
-      Datathon 2025<br />
-      <sub>Data Science Competition</sub>
+      Data Hackathon<br />
+      <sub>KUET FirstByte Datathon 2025</sub>
     </td>
   </tr>
 </table>
