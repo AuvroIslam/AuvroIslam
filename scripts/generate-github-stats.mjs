@@ -21,13 +21,6 @@ const response = await fetch("https://api.github.com/graphql", {
     query: `query($username: String!, $from: DateTime!, $to: DateTime!) {
       user(login: $username) {
         publicRepositories: repositories(ownerAffiliations: OWNER, privacy: PUBLIC) { totalCount }
-        highlightedRepositories: repositories(first: 3, orderBy: {field: STARGAZERS, direction: DESC}, ownerAffiliations: OWNER, privacy: PUBLIC) {
-          nodes {
-            name
-            stargazerCount
-            primaryLanguage { name color }
-          }
-        }
         contributionsCollection(from: $from, to: $to) {
           contributionCalendar {
             totalContributions
@@ -59,17 +52,10 @@ if (payload.errors?.length || !payload.data?.user) {
   throw new Error(`GitHub API returned an invalid response: ${JSON.stringify(payload.errors)}`);
 }
 
-const { publicRepositories, highlightedRepositories, contributionsCollection } = payload.data.user;
+const { publicRepositories, contributionsCollection } = payload.data.user;
 const updatedAt = today.toISOString().slice(0, 10);
 const calendar = contributionsCollection.contributionCalendar;
 const days = calendar.weeks.flatMap((week) => week.contributionDays);
-const levelColors = {
-  NONE: "#161b22",
-  FIRST_QUARTILE: "#0e4429",
-  SECOND_QUARTILE: "#006d32",
-  THIRD_QUARTILE: "#26a641",
-  FOURTH_QUARTILE: "#39d353",
-};
 
 let longestStreak = 0;
 let runningStreak = 0;
@@ -92,6 +78,32 @@ while (activeDayIndex >= 0 && days[activeDayIndex].contributionCount > 0) {
   activeDayIndex -= 1;
 }
 
+const chartLeft = 88;
+const chartTop = 196;
+const chartWidth = 780;
+const chartHeight = 150;
+const chartBottom = chartTop + chartHeight;
+const weeklyTotals = calendar.weeks.map((week) => week.contributionDays.reduce(
+  (total, day) => total + day.contributionCount,
+  0,
+));
+const maxWeeklyContributions = Math.max(1, ...weeklyTotals);
+const weekSpacing = chartWidth / Math.max(1, calendar.weeks.length - 1);
+const chartPoints = weeklyTotals.map((total, index) => ({
+  x: chartLeft + index * weekSpacing,
+  y: chartBottom - (total / maxWeeklyContributions) * chartHeight,
+  total,
+  startDate: calendar.weeks[index].contributionDays[0]?.date ?? updatedAt,
+}));
+const linePoints = chartPoints.map((point) => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+const areaPoints = `${chartLeft},${chartBottom} ${linePoints} ${chartPoints.at(-1)?.x.toFixed(1)},${chartBottom}`;
+const chartGrid = Array.from({ length: 5 }, (_, index) => {
+  const value = Math.round(maxWeeklyContributions * (4 - index) / 4);
+  const y = chartTop + index * (chartHeight / 4);
+  return `<line x1="${chartLeft}" y1="${y}" x2="${chartLeft + chartWidth}" y2="${y}" stroke="#21262d" stroke-dasharray="3 4"/>
+  <text x="${chartLeft - 12}" y="${y + 4}" text-anchor="end" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10">${value}</text>`;
+});
+const chartMarkers = chartPoints.map((point) => `<circle cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="2.5" fill="#8b949e" stroke="#0d1117" stroke-width="1.5"><title>Week of ${point.startDate}: ${point.total} contributions</title></circle>`);
 const monthLabels = [];
 let previousMonth = -1;
 for (const [weekIndex, week] of calendar.weeks.entries()) {
@@ -102,67 +114,36 @@ for (const [weekIndex, week] of calendar.weeks.entries()) {
 
   const month = new Date(`${monthStart.date}T00:00:00Z`).getUTCMonth();
   if (month !== previousMonth) {
-    monthLabels.push(`<text x="${100 + weekIndex * 14}" y="174" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11">${new Date(`${monthStart.date}T00:00:00Z`).toLocaleString("en-US", { month: "short", timeZone: "UTC" })}</text>`);
+    monthLabels.push(`<text x="${chartLeft + weekIndex * weekSpacing}" y="178" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11">${new Date(`${monthStart.date}T00:00:00Z`).toLocaleString("en-US", { month: "short", timeZone: "UTC" })}</text>`);
     previousMonth = month;
   }
 }
 
-const heatmap = calendar.weeks.flatMap((week, weekIndex) =>
-  week.contributionDays.map((day) => {
-    const weekday = new Date(`${day.date}T00:00:00Z`).getUTCDay();
-    return `<rect x="${100 + weekIndex * 14}" y="${184 + weekday * 13}" width="10" height="10" rx="2" fill="${levelColors[day.contributionLevel] ?? levelColors.NONE}"/>`;
-  }),
-);
-
-const escapeXml = (value) => value.replace(/[<>&"']/g, (character) => ({
-  "<": "&lt;",
-  ">": "&gt;",
-  "&": "&amp;",
-  "\"": "&quot;",
-  "'": "&apos;",
-})[character]);
-
-const projectCards = highlightedRepositories.nodes.map((repository, index) => {
-  const x = 24 + index * 302;
-  const language = repository.primaryLanguage?.name ?? "Code";
-  const languageColor = repository.primaryLanguage?.color ?? "#8b949e";
-  return `<rect x="${x}" y="286" width="284" height="76" rx="6" fill="#161b22" stroke="#30363d"/>
-  <circle cx="${x + 18}" cy="309" r="5" fill="${languageColor}"/>
-  <text x="${x + 30}" y="314" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="600">${escapeXml(repository.name)}</text>
-  <text x="${x + 18}" y="342" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11">${escapeXml(language)} · ${repository.stargazerCount} stars</text>`;
-});
-
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="390" viewBox="0 0 920 390" role="img" aria-labelledby="title description">
-  <title id="title">${username}'s code year</title>
-  <desc id="description">A contribution calendar, coding streaks, and highlighted public repositories. Updated ${updatedAt} UTC.</desc>
-  <rect width="920" height="390" fill="#0d1117"/>
-  <rect x="0.5" y="0.5" width="919" height="389" fill="none" stroke="#30363d"/>
-  <text x="24" y="32" fill="#39d353" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700">// ${username.toUpperCase()}_CODE_YEAR</text>
-  <text x="24" y="61" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="600">A year in commits</text>
-  <text x="24" y="82" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12">${calendar.totalContributions} contributions across public work · refreshed ${updatedAt}</text>
-  <text x="648" y="36" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="700">CURRENT STREAK</text>
-  <text x="648" y="61" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700">${currentStreak}d</text>
-  <text x="750" y="36" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="700">LONGEST</text>
-  <text x="750" y="61" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700">${longestStreak}d</text>
-  <text x="838" y="36" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="700">REPOS</text>
-  <text x="838" y="61" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700">${publicRepositories.totalCount}</text>
-  <line x1="24" y1="102" x2="896" y2="102" stroke="#30363d"/>
-  <text x="24" y="126" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="600">CONTRIBUTION CALENDAR</text>
-  <text x="67" y="161" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10">Sun</text>
-  <text x="67" y="187" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10">Tue</text>
-  <text x="67" y="213" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10">Thu</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="405" viewBox="0 0 920 405" role="img" aria-labelledby="title description">
+  <title id="title">${username}'s contribution activity</title>
+  <desc id="description">A weekly contribution graph for the past year, with total contributions and coding streaks. Updated ${updatedAt} UTC.</desc>
+  <rect width="920" height="405" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="919" height="404" fill="none" stroke="#30363d"/>
+  <text x="24" y="36" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="600">Contribution activity</text>
+  <text x="24" y="59" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">Weekly public contributions over the past year</text>
+  <text x="214" y="108" text-anchor="middle" fill="#58a6ff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="32" font-weight="700">${calendar.totalContributions}</text>
+  <text x="214" y="132" text-anchor="middle" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12">TOTAL CONTRIBUTIONS</text>
+  <line x1="390" y1="92" x2="390" y2="138" stroke="#30363d"/>
+  <text x="510" y="108" text-anchor="middle" fill="#58a6ff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="32" font-weight="700">${currentStreak}</text>
+  <text x="510" y="132" text-anchor="middle" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12">CURRENT STREAK</text>
+  <line x1="630" y1="92" x2="630" y2="138" stroke="#30363d"/>
+  <text x="750" y="108" text-anchor="middle" fill="#58a6ff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="32" font-weight="700">${longestStreak}</text>
+  <text x="750" y="132" text-anchor="middle" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12">LONGEST STREAK</text>
+  <text x="870" y="177" text-anchor="end" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11">refreshed ${updatedAt}</text>
   ${monthLabels.join("\n  ")}
-  ${heatmap.join("\n  ")}
-  <text x="710" y="254" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11">Less</text>
-  <rect x="744" y="244" width="10" height="10" rx="2" fill="#161b22"/>
-  <rect x="758" y="244" width="10" height="10" rx="2" fill="#0e4429"/>
-  <rect x="772" y="244" width="10" height="10" rx="2" fill="#006d32"/>
-  <rect x="786" y="244" width="10" height="10" rx="2" fill="#26a641"/>
-  <rect x="800" y="244" width="10" height="10" rx="2" fill="#39d353"/>
-  <text x="820" y="254" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11">More</text>
-  <text x="24" y="278" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="600">PROJECT INDEX</text>
-  ${projectCards.join("\n  ")}
+  ${chartGrid.join("\n  ")}
+  <polygon points="${areaPoints}" fill="#238636" fill-opacity="0.20"/>
+  <polyline points="${linePoints}" fill="none" stroke="#39d353" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  ${chartMarkers.join("\n  ")}
+  <line x1="88" y1="346" x2="868" y2="346" stroke="#30363d"/>
+  <text x="88" y="378" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11">${publicRepositories.totalCount} public repositories</text>
+  <text x="868" y="378" text-anchor="end" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11">Each point represents one week</text>
 </svg>
 `;
 
