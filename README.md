@@ -24,33 +24,32 @@
 
 <table>
   <tr>
-    <td colspan="4" align="center" valign="top">
+    <td align="center" valign="top" width="20%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
-      Juky Hackathon 2026 (Crisis Track)<br />
+      Juky Hackathon 2026<br />
+      (Crisis Track)<br />
       <sub>JRA Foundation</sub>
     </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top" width="25%">
+    <td align="center" valign="top" width="20%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
       Build with Gemma Hybrid Hackathon<br />
       <sub>Gemma &amp; Bangladesh Machine Learning Society</sub>
     </td>
-    <td align="center" valign="top" width="25%">
+    <td align="center" valign="top" width="20%">
       <h2>🏆</h2>
       <strong>2nd Runners-Up</strong><br />
       Microservices &amp; DevOps Hackathon<br />
       <sub>BUET CSE Fest 2026</sub>
     </td>
-    <td align="center" valign="top" width="25%">
+    <td align="center" valign="top" width="20%">
       <h2>🏆</h2>
       <strong>2nd Runners-Up</strong><br />
       Techathon Nationals &amp; Rover Summit Hackathon<br />
       <sub>IUT Robotics Society</sub>
     </td>
-    <td align="center" valign="top" width="25%">
+    <td align="center" valign="top" width="20%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
       KUET FirstByte Datathon 2025<br />
