@@ -88,5 +88,5 @@
 ## GitHub Stats
 
 <div align="center">
-  <img width="860" src="./assets/github-stats.svg" alt="Auvro Islam's GitHub contribution activity" />
+  <img width="920" src="./assets/github-stats.svg" alt="Auvro Islam's GitHub code year" />
 </div>
