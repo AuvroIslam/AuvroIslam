@@ -27,7 +27,7 @@
     <td align="center" valign="top" width="20%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
-      Juky Hackathon 2026<br />
+      July Hackathon 2026<br />
       (Crisis Track)<br />
       <sub>JRA Foundation</sub>
     </td>
