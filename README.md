@@ -35,7 +35,7 @@
       <h2>🏆</h2>
       <strong>Champion</strong><br />
       Build with Gemma Hybrid Hackathon<br />
-      <sub>Gemma &amp; Bangladesh Machine Learning Society</sub>
+      <sub>Sponsored by Google</sub>
     </td>
     <td align="center" valign="top" width="20%">
       <h2>🏆</h2>
