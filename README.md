@@ -15,45 +15,76 @@
 ## About Me
 
 - Founder, [Logarithm Studio](https://www.logarithmstudio.com/)
-- 5x National Hackathon Winner
+- 6x National Hackathon Winner and 3x International Hackathon Winner
 - Fourth-year Computer Science and Engineering student at **Khulna University of Engineering & Technology (KUET)**
 - Interested in web and mobile development, data science, machine learning, and Unity game development
 - I enjoy creating interactive products and using data-driven ideas to solve real-world problems
 
-## Recent Achievements
+## Achievements
+
+### National
 
 <table>
   <tr>
-    <td align="center" valign="top" width="20%">
+    <td align="center" valign="top" width="33%">
+      <h2>🏆</h2>
+      <strong>Champion</strong><br />
+      Build with Gemma Hybrid Hackathon<br />
+      <sub>Google for Developers</sub>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <h2>🏆</h2>
+      <strong>2nd Runners-Up</strong><br />
+      Microservices &amp; DevOps Hackathon<br />
+      <sub>BUET CSE Fest 2026</sub>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <h2>🏆</h2>
+      <strong>2nd Runners-Up</strong><br />
+      Techathon Nationals &amp; Rover Summit Hackathon<br />
+      <sub>IUT Robotics Society 2026</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="33%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
       July Hackathon 2026<br />
       (Crisis Track)<br />
       <sub>JRA Foundation</sub>
     </td>
-    <td align="center" valign="top" width="20%">
+    <td align="center" valign="top" width="33%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
-      Build with Gemma Hybrid Hackathon<br />
-      <sub>Sponsored by Google</sub>
+      Hypomatrix Hackathon 2026
     </td>
-    <td align="center" valign="top" width="20%">
-      <h2>🏆</h2>
-      <strong>2nd Runners-Up</strong><br />
-      Microservices &amp; DevOps Hackathon<br />
-      <sub>BUET CSE Fest 2026</sub>
-    </td>
-    <td align="center" valign="top" width="20%">
-      <h2>🏆</h2>
-      <strong>2nd Runners-Up</strong><br />
-      Techathon Nationals &amp; Rover Summit Hackathon<br />
-      <sub>IUT Robotics Society</sub>
-    </td>
-    <td align="center" valign="top" width="20%">
+    <td align="center" valign="top" width="33%">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
-      KUET FirstByte Datathon 2025<br />
-      <sub>K-MiNDs (KUET-Machine Intelligence and Data Science)</sub>
+      KUET FirstByte Datathon 2026
+    </td>
+  </tr>
+</table>
+
+### International
+
+<table>
+  <tr>
+    <td align="center" valign="top" width="33%">
+      <h2>🏆</h2>
+      <strong>2nd Runners-Up</strong><br />
+      NioHack 2026<br />
+      <sub>NioGraph Inc, American Society For Engineers LLC</sub>
+    </td>
+    <td align="center" valign="top" width="33%">
+      <h2>🏆</h2>
+      <strong>Champion - Conversational AI Segment</strong><br />
+      ML Empowerment Build Challenge 2.0
+    </td>
+    <td align="center" valign="top" width="33%">
+      <h2>🏆</h2>
+      <strong>Champion - AI/ML Segment</strong><br />
+      HackSocial 2026
     </td>
   </tr>
 </table>
