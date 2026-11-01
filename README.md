@@ -7,7 +7,7 @@
   <p>
     <a href="https://www.linkedin.com/in/oitijya-islam-auvro-a252a5325/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
     <a href="mailto:oitijya2002@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-    <a href="https://porfolio-website-alpha-six.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+    <a href="https://www.auvroislam.tech/"><img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
     <img src="https://komarev.com/ghpvc/?username=AuvroIslam&style=for-the-badge&color=0e75b6" alt="Profile views" />
   </p>
 </div>
@@ -15,7 +15,7 @@
 ## About Me
 
 - Founder, [Logarithm Studio](https://www.logarithmstudio.com/)
-- 6x National Hackathon Winner and 3x International Hackathon Winner
+- 6x National Hackathon Winner and 4x International Hackathon Winner
 - Fourth-year Computer Science and Engineering student at **Khulna University of Engineering & Technology (KUET)**
 - Interested in web and mobile development, data science, machine learning, and Unity game development
 - I enjoy creating interactive products and using data-driven ideas to solve real-world problems
@@ -85,6 +85,14 @@
       <h2>🏆</h2>
       <strong>Champion - AI/ML Segment</strong><br />
       HackSocial 2026
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="33%">
+      <h2>🏆</h2>
+      <strong>Champion</strong><br />
+      Cyber AI Hackathon 2026<br />
+      <sub>University of Derby, UK</sub>
     </td>
   </tr>
 </table>
