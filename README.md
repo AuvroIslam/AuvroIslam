@@ -68,8 +68,14 @@
 
 ### International
 
-<table>
+<table align="center">
   <tr>
+    <td align="center" valign="top" width="33%">
+      <h2>🏆</h2>
+      <strong>Champion</strong><br />
+      Cyber AI Hackathon 2026<br />
+      <sub>University of Derby, UK</sub>
+    </td>
     <td align="center" valign="top" width="33%">
       <h2>🏆</h2>
       <strong>2nd Runners-Up</strong><br />
@@ -81,18 +87,12 @@
       <strong>Champion - Conversational AI Segment</strong><br />
       ML Empowerment Build Challenge 2.0
     </td>
-    <td align="center" valign="top" width="33%">
+  </tr>
+  <tr>
+    <td align="center" valign="top" colspan="3">
       <h2>🏆</h2>
       <strong>Champion - AI/ML Segment</strong><br />
       HackSocial 2026
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top" width="33%">
-      <h2>🏆</h2>
-      <strong>Champion</strong><br />
-      Cyber AI Hackathon 2026<br />
-      <sub>University of Derby, UK</sub>
     </td>
   </tr>
 </table>
