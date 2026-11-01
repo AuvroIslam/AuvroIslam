@@ -68,34 +68,38 @@
 
 ### International
 
-<table align="center">
+<div align="center">
+<table>
   <tr>
-    <td align="center" valign="top" width="33%">
+    <td align="center" valign="top" width="260">
       <h2>🏆</h2>
       <strong>Champion</strong><br />
       Cyber AI Hackathon 2026<br />
       <sub>University of Derby, UK</sub>
     </td>
-    <td align="center" valign="top" width="33%">
+    <td align="center" valign="top" width="260">
       <h2>🏆</h2>
       <strong>2nd Runners-Up</strong><br />
       NioHack 2026<br />
       <sub>NioGraph Inc, American Society For Engineers LLC</sub>
     </td>
-    <td align="center" valign="top" width="33%">
+    <td align="center" valign="top" width="260">
       <h2>🏆</h2>
       <strong>Champion - Conversational AI Segment</strong><br />
       ML Empowerment Build Challenge 2.0
     </td>
   </tr>
+</table>
+<table>
   <tr>
-    <td align="center" valign="top" colspan="3">
+    <td align="center" valign="top" width="260">
       <h2>🏆</h2>
       <strong>Champion - AI/ML Segment</strong><br />
       HackSocial 2026
     </td>
   </tr>
 </table>
+</div>
 
 ## Tech Stack
 
